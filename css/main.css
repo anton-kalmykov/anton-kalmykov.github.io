@@ -1,0 +1,84 @@
+body {
+    font-family: "Courier New", Courier, monospace;
+}
+
+@keyframes flash {
+    from,
+    50%,
+    to {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+.flash {
+    animation-name: flash;
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+#field-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -270px 0 0 -345px;
+}
+
+#field {
+    position: relative;
+    width: 690px;
+    height: 480px;
+    border: 3px solid black;
+}
+
+#title {
+    text-align: left;
+    line-height: 30px;
+    font-size: 18px;
+    margin: 0;
+    font-weight: normal;
+}
+
+#score {
+    text-align: right;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+#start, #replay {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    text-align: center;
+}
+
+#start > a, #replay > a {
+    text-decoration: none;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 30px;
+    color: #000;
+    text-shadow: 4px 4px 2px #e8e8e8;
+}
+
+#start > a:hover, #replay > a:hover {
+    color: #b1e3ef;
+}
+
+.block {
+    position: absolute;
+    border: 1px solid transparent;
+}
+
+.block .inner {
+    width: 24px;
+    height: 24px;
+    background-color: #b1e3ef;
+    border: 2px solid black;
+}
